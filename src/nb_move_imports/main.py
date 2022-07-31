@@ -8,6 +8,7 @@ import nbformat
 from nbformat.notebooknode import NotebookNode
 
 IMPORT_CELL_TAG = "IMPORT_CELL"
+IGNORE_CELL_TAG = "IGNORE_MV_IMPORTS"
 IMPORT_PATTERN = r"(?m)^(?:from[ ]+(\S+)[ ]+)?import[ ]+(\S+)[ ]*$"
 
 T = TypeVar("T")
@@ -40,7 +41,12 @@ def reorder_imoprt_statements(
     Returns:
         NotebookNode: Output notebook with reordered statements
     """
-    code_cells = [c for c in nb["cells"] if c["cell_type"] == "code"]
+    code_cells = [
+        c
+        for c in nb["cells"]
+        if (c["cell_type"] == "code")
+        and (IGNORE_CELL_TAG not in c["metadata"].get("tags", []))
+    ]
 
     # return if there are no code cells
     if not code_cells:
