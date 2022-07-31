@@ -1,6 +1,13 @@
 # nb_move_imports
 
 ------------------------------
+[![PyPI version](https://badge.fury.io/py/nb_move_imports.svg)](https://badge.fury.io/py/nb_move_imports)
+[![Python version](https://img.shields.io/badge/python-≥3.8-blue.svg)](https://pypi.org/project/kedro/)
+[![Release Pipeline](https://github.com/AnH0ang/nb_move_imports/actions/workflows/release.yml/badge.svg)](https://github.com/AnH0ang/nb_move_imports/actions/workflows/release.yml)
+[![Test](https://github.com/AnH0ang/nb_move_imports/actions/workflows/test.yml/badge.svg)](https://github.com/AnH0ang/nb_move_imports/actions/workflows/test.yml)
+[![Code Quality](https://github.com/AnH0ang/nb_move_imports/actions/workflows/code_quality.yml/badge.svg)](https://github.com/AnH0ang/nb_move_imports/actions/workflows/code_quality.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/STATWORX/statworx-theme/blob/master/LICENSE)
+![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)
 
 Move import statements in jupyter notebook to the first cell
 
