@@ -1,4 +1,4 @@
 """nb_move_imports module."""
 from .main import reorder_imoprt_statements
 
-__version__ = "0.1.0"
+__version__ = "0.2.0"
