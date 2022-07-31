@@ -1,7 +1,11 @@
 [tool.commitizen]
 name = "cz_customize"
 version = "0.3.0"
-version_files = ["src/nb_move_imports/__init__.py", "pyproject.toml:version"]
+version_files = [
+    "src/nb_move_imports/__init__.py",
+    "pyproject.toml:version",
+    "README.md:rev",
+]
 
 [tool.commitizen.customize]
 message_template = "[{{tag1}}:{{tag2}}] {{message}}"
