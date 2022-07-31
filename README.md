@@ -28,8 +28,8 @@ In order to skip a cell you have to tag it with the `IGNORE_MV_IMPORTS` tag.
 Add this section to your `pre-commit-config.yaml` so that the nb_move_imports script is executed before each commit with pre-commit.
 
 ```yaml
-- repo: https://github.com/pre-commit/pre-commit-hooks
-  rev: 0.2.0
+- repo: https://github.com/AnH0ang/nb_move_imports
+  rev: 0.3.0
   hooks:
     - id: nb_move_imports
       name: nb_move_imports

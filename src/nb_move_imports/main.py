@@ -1,6 +1,6 @@
 import re
 from itertools import filterfalse, tee
-from typing import Callable, Iterable, List, Optional, Tuple, TypeVar
+from typing import Callable, Iterable, List, Tuple, TypeVar
 
 import click
 import isort
@@ -86,9 +86,8 @@ def reorder_imoprt_statements(
 
 @click.command()
 @click.option("--sort", is_flag=True, help="Sort the import with isort")
-@click.argument("input_path")
-@click.argument("output_path", required=False)
-def main(sort: bool, input_path: str, output_path: Optional[str] = None) -> None:
+@click.argument("files", nargs=-1, type=click.Path(exists=True))
+def main(sort: bool, files: List[str]) -> None:
     """Main entry point for the nb_move_import script.
 
     Moves and sorts the import statements into the first cell of the Jupyter notebook
@@ -96,16 +95,13 @@ def main(sort: bool, input_path: str, output_path: Optional[str] = None) -> None
 
     Args:
         sort (bool): Indicates if the import statements should be sorted with isort
-        input_path (str): Path where the unsorted jupyter notebook is stored.
-        output_path (Optional[str]): Path where the sorted jupyter notebook is written to.
-            If it is `None` then then the sorted notebook will be written back to the input
-            path. Defaults to None.
+        files (List[str]): Path to the unsorted jupyter notebooks.
     """
-    nb = nbformat.read(input_path, as_version=4)
-    print(f"Reoder notebook at '{input_path}'.")
-    nb = reorder_imoprt_statements(nb, sort)
-    output_path = input_path if output_path is None else output_path
-    nbformat.write(nb, output_path)
+    for file in files:
+        nb = nbformat.read(file, as_version=4)
+        print(f"Reoder notebook at '{file}'.")
+        nb = reorder_imoprt_statements(nb, sort)
+        nbformat.write(nb, file)
 
 
 if __name__ == "__main__":
