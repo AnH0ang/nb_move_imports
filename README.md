@@ -19,6 +19,10 @@ To run the script on a specific jupyter notebook run:
 nb_move_imports path/to/notebook.ipynb
 ```
 
+## Skip processing of cells
+
+In order to skip a cell you have to tag it with the `IGNORE_MV_IMPORTS` tag.
+
 ## Precommit Hook
 
 Add this section to your `pre-commit-config.yaml` so that the nb_move_imports script is executed before each commit with pre-commit.
