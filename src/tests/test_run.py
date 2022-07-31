@@ -37,12 +37,12 @@ def test_cli(shared_datadir: Path, tmpdir: Path) -> None:
     runner = CliRunner()
 
     # define paths
-    input_path = str(shared_datadir / "unsorted_nb.ipynb")
-    output_path = str(tmpdir / "sorted_nb.ipynb")
+    path = str(shared_datadir / "unsorted_nb.ipynb")
 
     # run cli
-    result = runner.invoke(main, [input_path, output_path])
+    result = runner.invoke(main, [path])
     assert result.exit_code == 0
 
     # read in sorted notebook
-    _ = nbformat.read(output_path, as_version=4)
+    sorted_nb = nbformat.read(path, as_version=4)
+    test_convertion(sorted_nb)
