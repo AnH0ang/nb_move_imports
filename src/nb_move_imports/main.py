@@ -9,7 +9,7 @@ from nbformat.notebooknode import NotebookNode
 
 IMPORT_CELL_TAG = "IMPORT_CELL"
 IGNORE_CELL_TAG = "IGNORE_MV_IMPORTS"
-IMPORT_PATTERN = r"(?m)^(?:from[ ]+(\S+)[ ]+)?import[ ]+(\S+)[ ]*$"
+IMPORT_PATTERN = r"(?m)^(?:from[ ]+(.*)[ ]+)?import[ ].*$"
 
 T = TypeVar("T")
 
