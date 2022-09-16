@@ -29,7 +29,7 @@ Add this section to your `pre-commit-config.yaml` so that the nb_move_imports sc
 
 ```yaml
 - repo: https://github.com/AnH0ang/nb_move_imports
-  rev: 0.4.0
+  rev: 0.4.1
   hooks:
     - id: nb_move_imports
       name: nb_move_imports
