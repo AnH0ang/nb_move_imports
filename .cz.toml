@@ -1,6 +1,6 @@
 [tool.commitizen]
 name = "cz_customize"
-version = "0.4.4"
+version = "0.4.5"
 version_files = [
     "src/nb_move_imports/__init__.py",
     "pyproject.toml:version",

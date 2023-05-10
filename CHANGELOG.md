@@ -1,3 +1,8 @@
+## 0.4.5 (2023-05-10)
+
+
+- [CI:FIX] Update pre-commit versions
+
 ## 0.4.4 (2023-05-10)
 
 
