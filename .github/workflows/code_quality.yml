@@ -14,9 +14,9 @@ jobs:
     name: Linting
     steps:
     - uses: actions/checkout@v3
-    - name: Set up Python 3.8.9
+    - name: Set up Python 3.8.15
       uses: actions/setup-python@v3
       with:
-        python-version: 3.8.9
+        python-version: 3.8.15
     - run: pip install click==8.0.0
     - uses: pre-commit/action@v2.0.3
