@@ -44,7 +44,7 @@ repos:
         description: isort your imports, so you don't have to.
         files: \.py$
 
-  - repo: https://gitlab.com/pycqa/flake8
+  - repo: https://github.com/PyCQA/flake8
     rev: 3.9.2
     hooks:
       - id: flake8
@@ -94,6 +94,11 @@ repos:
     rev: v2.31.1
     hooks:
       - id: pyupgrade
+
+  - repo: https://gitlab.com/smop/pre-commit-hooks
+    rev: v1.0.0
+    hooks:
+      - id: check-poetry
 
   # TODO: include poetry hook if it is out of beta
   # - repo: https://github.com/python-poetry/poetry
