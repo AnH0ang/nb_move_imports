@@ -3,7 +3,6 @@ from itertools import filterfalse, tee
 from typing import Callable, Iterable, List, Tuple, TypeVar
 
 import click
-import isort
 import nbformat
 from nbformat.notebooknode import NotebookNode
 
@@ -79,6 +78,8 @@ def reorder_imoprt_statements(
     import_statement = "\n".join(all_import_lines)
     new_cell_source = "\n".join([import_statement, import_cell["source"]])
     if apply_isort:
+        import isort
+
         new_cell_source = isort.code(new_cell_source)
     import_cell["source"] = new_cell_source
     return nb
