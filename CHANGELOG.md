@@ -1,3 +1,8 @@
+## 0.4.4 (2023-05-10)
+
+
+- [ORG:FIX] Make import of isort optional
+
 ## 0.4.3 (2023-05-10)
 
 

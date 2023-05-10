@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "nb_move_imports"
-version = "0.4.3"
+version = "0.4.4"
 description = "Move import statements in jupyter notebook to the first cell"
 authors = ["An Hoang <anhoang31415@gmail.com>"]
 readme = "README.md"
