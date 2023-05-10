@@ -1,3 +1,8 @@
+## 0.4.3 (2023-05-10)
+
+
+- [CI:FIX] Update python version in github actions
+
 ## 0.4.2 (2023-05-10)
 
 
