@@ -1,3 +1,9 @@
+## 0.4.2 (2023-05-10)
+
+
+- [ORG:FIX] Make isort an optional dependency
+- [CI:FIX] Add poetry pre-commit hook
+
 ## 0.4.1 (2022-09-16)
 
 
